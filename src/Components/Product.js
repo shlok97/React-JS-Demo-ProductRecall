@@ -39,13 +39,15 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Product() {
+export default function Product(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   function handleExpandClick() {
     setExpanded(!expanded);
   }
+
+  var product = props.product
 
   return (
     <Card className={classes.card}>
@@ -60,17 +62,17 @@ export default function Product() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Product-Name"
-        subheader="SmartPhone"
+        title={product.title}
+        subheader={product.subtitle}
       />
       <CardMedia
         className={classes.media}
-        image="https://picsum.photos/200/300"
+        image={"https://picsum.photos/id/" + product.index + "/200/300"}
         title="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          iPhone 8 introduces an all‑new glass design. The world’s most popular camera, now even better. The most powerful and smartest chip ever in a smartphone. Wireless charging that’s truly effortless. And augmented reality experiences never before possible.
+          {product.shortDescription}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -94,7 +96,7 @@ export default function Product() {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>
-          iPhone 8 introduces an all‑new glass design. The world’s most popular camera, now even better. The most powerful and smartest chip ever in a smartphone. Wireless charging that’s truly effortless. And augmented reality experiences never before possible. iPhone 8. A new generation of iPhone. Augmented Reality: A11 Bionic powers extraordinary augmented reality apps and games that will change the way you see the world. Apple‑Designed GPU: The new Apple‑designed three‑core GPU is up to 30% faster than A10 Fusion. Faster CPU: Introducing A11 Bionic. With four efficiency cores that are up to 70 percent faster than A10 Fusion. And two performance cores that are up to 25% faster.
+            {product.fullDescription}
           </Typography>
         </CardContent>
       </Collapse>
