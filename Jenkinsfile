@@ -21,6 +21,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                sh 'nvm install 12.7.0'
                 sh 'npm start'
             }
         }
