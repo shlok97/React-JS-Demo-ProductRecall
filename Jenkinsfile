@@ -9,6 +9,13 @@ pipeline {
       CI = 'true'
     }
     stages {
+        stage('Setup Node') {
+            steps {
+              env.NODE_HOME="${tool 'Node 6.x'}"
+              env.PATH="${env.NODE_HOME}/bin:${env.PATH}"
+              sh 'npm --version'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'npm install'
@@ -21,7 +28,6 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'nvm install 12.7.0'
                 sh 'npm start'
             }
         }
