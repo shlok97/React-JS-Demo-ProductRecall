@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Pull') {
             steps {
-                sh 'git pull'
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/appsdemo/React-JS-Demo-ProductRecall.git']]])
             }
         }
         stage('Build') {
