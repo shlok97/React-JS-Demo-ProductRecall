@@ -11,9 +11,9 @@ pipeline {
     stages {
         stage('Setup Node') {
             steps {
-              env.NODE_HOME="${tool 'nodejs'}"
-              env.PATH="${env.NODE_HOME}/bin:${env.PATH}"
-              sh 'npm --version'
+              nodejs(nodeJSInstallationName: 'nodejs', configId: '<config-file-provider-id>') {
+                  sh 'npm config ls'
+              }
             }
         }
         stage('Build') {
