@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Setup Node') {
             steps {
-              nodejs(nodeJSInstallationName: 'Node 12.x', configId: '<config-file-provider-id>') {
+              nodejs(nodeJSInstallationName: 'NodeJS 12.7.0', configId: '<config-file-provider-id>') {
                   sh 'npm config ls'
               }
             }
