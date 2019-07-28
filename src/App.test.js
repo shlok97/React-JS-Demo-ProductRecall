@@ -12,9 +12,13 @@ import React from 'react'
 import { mount, shallow } from 'enzyme';
 
 import App from './App';
-import ProductRecall from './Components/ProductRecall';
+
 
 const app = shallow(<App />);
+
+// Product recall tests
+import ProductRecall from './Components/ProductRecall';
+
 const productRecall = shallow(<ProductRecall />);
 it('renders correctly', () => {
   expect(app).toMatchSnapshot();
