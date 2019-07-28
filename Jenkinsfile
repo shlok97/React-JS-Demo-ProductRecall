@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:6-alpine'
+            image 'node:12-alpine'
             args '-p 3000:3000'
         }
     }
@@ -9,13 +9,6 @@ pipeline {
       CI = 'true'
     }
     stages {
-        stage('Setup Node') {
-            steps {
-              nodejs(nodeJSInstallationName: 'NodeJS 12.7.0', configId: '<config-file-provider-id>') {
-                  sh 'npm config ls'
-              }
-            }
-        }
         stage('Build') {
             steps {
                 sh 'npm install'
