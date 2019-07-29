@@ -24,10 +24,11 @@ pipeline {
                 sh 'npm run test'
             }
         }
-        stage('Deploy') {
-            steps {
-                sh 'daemonize -E JENKINS_NODE_COOKIE=dontKillMe npm start'
-            }
-        }
+    }
+    post {
+      success {
+        sh 'export JENKINS_NODE_COOKIE=dontKillMe'
+        sh 'npm start'
+      }
     }
 }
