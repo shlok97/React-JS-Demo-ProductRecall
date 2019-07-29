@@ -27,7 +27,7 @@ pipeline {
     }
     post {
       success {
-        sh 'export BUILD_ID=allow_to_run_as_daemon'
+        sh 'export BUILD_ID=dontKillMe'
         sh 'export JENKINS_NODE_COOKIE=dontKillMe'
         sh 'npm start'
       }
