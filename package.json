@@ -13,7 +13,7 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "PORT=8000 forever start -c \"react-scripts start\"",
+    "start": "PORT=8000 forever start -c \"react-scripts start\" ./src/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
