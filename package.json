@@ -13,7 +13,7 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "JENKINS_NODE_COOKIE=dontKillMe PORT=8000 BUILD_ID=dontKillMe forever -a -l myforever.log ./src/index.js &",
+    "start": "JENKINS_NODE_COOKIE=dontKillMe PORT=8000 BUILD_ID=dontKillMe forever start ./src/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
