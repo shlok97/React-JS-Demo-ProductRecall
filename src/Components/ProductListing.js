@@ -31,7 +31,7 @@ export default function ProductListing() {
     index: 1,
     title: "Product-Name 1",
     subtitle: "SmartPhone",
-    shortDescription: "iPhone 8 introduces an all‑new glass design. The world’s most popular camera, now even better. The most powerful and smartest chip ever in a smartphone. Wireless charging that’s truly effortless. And augmented reality experiences never before possible.",
+    shortDescription: "iPhone 10 introduces an all‑new glass design. The world’s most popular camera, now even better. The most powerful and smartest chip ever in a smartphone. Wireless charging that’s truly effortless. And augmented reality experiences never before possible.",
     fullDescription: "iPhone 8 introduces an all‑new glass design. The world’s most popular camera, now even better. The most powerful and smartest chip ever in a smartphone. Wireless charging that’s truly effortless. And augmented reality experiences never before possible. iPhone 8. A new generation of iPhone. Augmented Reality: A11 Bionic powers extraordinary augmented reality apps and games that will change the way you see the world. Apple‑Designed GPU: The new Apple‑designed three‑core GPU is up to 30% faster than A10 Fusion. Faster CPU: Introducing A11 Bionic. With four efficiency cores that are up to 70 percent faster than A10 Fusion. And two performance cores that are up to 25% faster."
   },
   {
