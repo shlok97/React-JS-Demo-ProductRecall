@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'BUILD_ID=dontKillMe forever -a -l myforever.log ./src/index.js &'
+                sh 'BUILD_ID=dontKillMe && forever -a -l myforever.log ./src/index.js &'
             }
         }
     }
